@@ -268,6 +268,51 @@ button{border:none;background:none;font-family:inherit;cursor:pointer}
 .floating-wa-txt{font-size:13px;font-weight:600;white-space:nowrap}
 @keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}50%{box-shadow:0 4px 28px rgba(37,211,102,.65),0 0 0 8px rgba(37,211,102,.1)}}
 
+/* PILLARS — VISUAL IDENTITY */
+.pillar{position:relative;overflow:hidden}
+.pillar::after{content:attr(data-n);position:absolute;right:10px;bottom:-14px;font-size:82px;font-weight:900;line-height:1;pointer-events:none;user-select:none;opacity:.07;color:var(--primary)}
+.pillar--web{background:linear-gradient(135deg,#f2f0ff 0%,#e8e4ff 100%)}
+.pillar--apps{background:linear-gradient(135deg,#f5f0ff 0%,#ece3ff 100%)}
+.pillar--soporte{background:linear-gradient(135deg,#edfcfa 0%,#d3f5f2 100%)}
+.pillar--auto{background:linear-gradient(135deg,#fffdf0 0%,#fff3cc 100%)}
+.pillar--web .pillar-icon{background:rgba(53,37,205,.1);color:#3525CD}
+.pillar--apps .pillar-icon{background:rgba(124,58,237,.1);color:#7C3AED}
+.pillar--soporte .pillar-icon{background:rgba(13,148,136,.12);color:#0D9488}
+.pillar--auto .pillar-icon{background:rgba(201,168,76,.15);color:#a07820}
+.pillar--web .pillar-link{color:#3525CD;background:rgba(53,37,205,.08)}
+.pillar--apps .pillar-link{color:#7C3AED;background:rgba(124,58,237,.08)}
+.pillar--soporte .pillar-link{color:#0D9488;background:rgba(13,148,136,.08)}
+.pillar--auto .pillar-link{color:#a07820;background:rgba(201,168,76,.1)}
+
+/* PORT ACTIONS */
+.port-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.port-actions .btn{flex:1;min-width:110px;justify-content:center;font-size:12px}
+
+/* PROJECT MODAL */
+.proj-overlay{position:fixed;inset:0;background:rgba(11,10,30,.55);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.proj-overlay.open{opacity:1;pointer-events:all}
+.proj-box{background:var(--surface);border-radius:var(--r-card);width:100%;max-width:620px;max-height:88vh;overflow-y:auto;box-shadow:0 24px 80px rgba(11,10,30,.22);transform:translateY(24px) scale(.98);transition:transform .3s cubic-bezier(.22,1,.36,1);position:relative}
+.proj-overlay.open .proj-box{transform:translateY(0) scale(1)}
+.proj-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:var(--surface-low);border:1px solid var(--border-light);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-2);font-size:20px;line-height:1;transition:background var(--t);z-index:2}
+.proj-close:hover{background:var(--surface-container)}
+.proj-header{padding:28px 28px 0}
+.proj-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.proj-type{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--primary)}
+.proj-title{font-size:24px;font-weight:800;margin-bottom:6px}
+.proj-tagline{font-size:14px;color:var(--text-2)}
+.proj-body{padding:20px 28px 28px}
+.proj-lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;margin-top:20px}
+.proj-lbl:first-child{margin-top:0}
+.proj-desc{font-size:14px;color:var(--text-2);line-height:1.65}
+.proj-feats{display:flex;flex-direction:column;gap:6px}
+.proj-feat{display:flex;align-items:flex-start;gap:8px;font-size:14px;color:var(--text-2)}
+.proj-feat::before{content:'✓';color:var(--primary);font-weight:700;flex-shrink:0}
+.proj-audience{font-size:13px;color:var(--text-2);background:var(--surface-low);border-radius:var(--r-sm);padding:10px 14px;border-left:3px solid var(--primary)}
+.proj-stack{display:flex;flex-wrap:wrap;gap:6px}
+.proj-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.proj-actions .btn{flex:1;min-width:140px;justify-content:center}
+@media(max-width:540px){.proj-header,.proj-body{padding-left:18px;padding-right:18px}.proj-actions .btn{flex-basis:100%}}
+
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}

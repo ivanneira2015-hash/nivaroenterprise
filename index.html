@@ -119,7 +119,7 @@
   <div class="stats-inner">
     <div class="stat"><div class="stat-num">+<em>20</em></div><div class="stat-lbl">Proyectos entregados</div></div>
     <div class="stat"><div class="stat-num"><em>4</em>+</div><div class="stat-lbl">Años de experiencia</div></div>
-    <div class="stat"><div class="stat-num">&lt;<em>24hs</em></div><div class="stat-lbl">Tiempo de respuesta</div></div>
+    <div class="stat"><div class="stat-num"><em>24hs</em></div><div class="stat-lbl">Tiempo de respuesta</div></div>
     <div class="stat"><div class="stat-num"><em>100</em>%</div><div class="stat-lbl">Satisfacción de clientes</div></div>
   </div>
 </div>
@@ -133,25 +133,25 @@
       <p>De la idea al producto final. Cubrimos todas las necesidades tecnológicas de tu negocio.</p>
     </div>
     <div class="pillars-grid">
-      <div class="pillar reveal rv1">
+      <div class="pillar pillar--web reveal rv1" data-n="01">
         <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
         <div class="pillar-name">Desarrollo Web</div>
         <div class="pillar-desc">Landings, e-commerce, portales institucionales y sistemas web a medida.</div>
         <a href="#webs" class="pillar-link">Ver catálogo →</a>
       </div>
-      <div class="pillar reveal rv2">
+      <div class="pillar pillar--apps reveal rv2" data-n="02">
         <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-linecap="round" stroke-width="3"/></svg></div>
         <div class="pillar-name">Aplicaciones</div>
         <div class="pillar-desc">Apps de gestión, CRM, bots con IA y automatizaciones de procesos.</div>
         <a href="#apps" class="pillar-link">Ver apps →</a>
       </div>
-      <div class="pillar reveal rv3">
+      <div class="pillar pillar--soporte reveal rv3" data-n="03">
         <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
         <div class="pillar-name">Soporte Técnico</div>
         <div class="pillar-desc">Diagnóstico, reparación, redes y mantenimiento de equipos informáticos.</div>
         <a href="#soporte" class="pillar-link">Ver soporte →</a>
       </div>
-      <div class="pillar reveal rv4">
+      <div class="pillar pillar--auto reveal rv4" data-n="04">
         <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div class="pillar-name">Automatizaciones</div>
         <div class="pillar-desc">Scripts, bots, integraciones y flujos automáticos para eliminar tareas repetitivas.</div>
@@ -650,24 +650,31 @@
             <span class="badge badge-tech">CSS</span>
             <span class="badge badge-tech">JavaScript</span>
           </div>
-          <a href="https://nivaroproducts.netlify.app" class="port-link" target="_blank" rel="noopener">Ver proyecto →</a>
+          <div class="port-actions">
+            <button class="btn btn-sm btn-outline" data-project="products">Ver detalle</button>
+            <a href="https://nivaroproducts.netlify.app" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Ver proyecto →</a>
+          </div>
         </div>
       </div>
 
       <div class="port-card reveal rv2">
         <div class="port-thumb">
           <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="MayoExpress POS" loading="lazy"/>
-          <div class="port-status"><span class="badge badge-gold">En desarrollo</span></div>
+          <div class="port-status"><span class="badge badge-green">LIVE</span></div>
         </div>
         <div class="port-body">
           <div class="port-type">Sistema de Gestión / POS</div>
           <div class="port-name">MayoExpress</div>
-          <div class="port-desc">POS completo para distribuidoras mayoristas. Gestión de clientes, stock, ventas, caja y reportes en tiempo real.</div>
+          <div class="port-desc">Sistema POS completo para distribuidoras mayoristas y minoristas. Stock, ventas, caja y reportes en tiempo real.</div>
           <div class="port-stack">
             <span class="badge badge-tech">Next.js</span>
             <span class="badge badge-tech">TypeScript</span>
             <span class="badge badge-tech">Prisma</span>
             <span class="badge badge-tech">Supabase</span>
+          </div>
+          <div class="port-actions">
+            <button class="btn btn-sm btn-outline" data-project="mayo">Ver detalle</button>
+            <a href="https://wa.me/5411154867460?text=Hola%20Walter!%20Me%20interesa%20solicitar%20una%20demo%20de%20MayoExpress%2C%20el%20sistema%20POS%20para%20distribuidoras.%20%C2%BFPodemos%20hablar%3F" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Solicitar demo →</a>
           </div>
         </div>
       </div>
@@ -675,16 +682,20 @@
       <div class="port-card reveal rv3">
         <div class="port-thumb">
           <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Nivaro CRM" loading="lazy"/>
-          <div class="port-status"><span class="badge badge-gold">En desarrollo</span></div>
+          <div class="port-status"><span class="badge badge-green">LIVE</span></div>
         </div>
         <div class="port-body">
           <div class="port-type">SaaS / CRM</div>
           <div class="port-name">Nivaro CRM</div>
-          <div class="port-desc">Plataforma SaaS multi-tenant para gestión de cobranzas. Dashboard completo con roles, clientes y reportes.</div>
+          <div class="port-desc">CRM para PyMEs, vendedores de electrodomésticos y negocios con cobros diarios o en cuotas. Multi-tenant.</div>
           <div class="port-stack">
             <span class="badge badge-tech">Next.js</span>
             <span class="badge badge-tech">TypeScript</span>
             <span class="badge badge-tech">PostgreSQL</span>
+          </div>
+          <div class="port-actions">
+            <button class="btn btn-sm btn-outline" data-project="crm">Ver detalle</button>
+            <a href="https://wa.me/5411154867460?text=Hola%20Walter!%20Quiero%20solicitar%20una%20demo%20de%20Nivaro%20CRM%20para%20gesti%C3%B3n%20de%20cobranzas.%20%C2%BFPodemos%20hablar%3F" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Solicitar demo →</a>
           </div>
         </div>
       </div>
@@ -704,6 +715,10 @@
             <span class="badge badge-tech">Prisma</span>
             <span class="badge badge-tech">Jest</span>
           </div>
+          <div class="port-actions">
+            <button class="btn btn-sm btn-outline" data-project="amia">Ver detalle</button>
+            <a href="https://wa.me/5411154867460?text=Hola%20Walter!%20Vi%20el%20proyecto%20AMIA%20y%20me%20interesa%20una%20plataforma%20similar.%20%C2%BFPodemos%20hablar%3F" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Consultar →</a>
+          </div>
         </div>
       </div>
 
@@ -720,6 +735,10 @@
             <span class="badge badge-tech">HTML</span>
             <span class="badge badge-tech">CSS</span>
             <span class="badge badge-tech">JavaScript</span>
+          </div>
+          <div class="port-actions">
+            <button class="btn btn-sm btn-outline" data-project="terra">Ver detalle</button>
+            <a href="https://wa.me/5411154867460?text=Hola%20Walter!%20Vi%20el%20trabajo%20en%20Terra%20Fitness%20y%20me%20gustar%C3%ADa%20un%20sitio%20similar.%20%C2%BFPodemos%20hablar%3F" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Consultar →</a>
           </div>
         </div>
       </div>
@@ -738,6 +757,10 @@
             <span class="badge badge-tech">Vapi</span>
             <span class="badge badge-tech">Groq</span>
             <span class="badge badge-tech">IA</span>
+          </div>
+          <div class="port-actions">
+            <button class="btn btn-sm btn-outline" data-project="bot">Ver detalle</button>
+            <a href="https://wa.me/5411154867460?text=Hola%20Walter!%20Me%20interesa%20un%20bot%20con%20IA%20similar%20al%20Mayo%20Leads%20Bot.%20%C2%BFPodemos%20hablar%3F" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Solicitar similar →</a>
           </div>
         </div>
       </div>
@@ -884,5 +907,12 @@
 </footer>
 
 <script src="js/app.js"></script>
+<!-- PROJECT MODAL -->
+<div id="proj-overlay" class="proj-overlay" hidden>
+  <div class="proj-box" role="dialog" aria-modal="true">
+    <button class="proj-close" id="proj-modal-close" aria-label="Cerrar">×</button>
+    <div id="proj-modal-body"></div>
+  </div>
+</div>
 </body>
 </html>
