@@ -173,8 +173,8 @@ function openProjectModal(key) {
   const stack = p.stack.map(s => `<span class="badge badge-tech">${s}</span>`).join('');
   let actions = '';
   if (p.link) actions += `<a href="${p.link}" class="btn btn-primary" target="_blank" rel="noopener">Ver proyecto →</a>`;
-  if (p.demo) actions += `<a href="https://wa.me/5411154867460?text=${p.demoMsg}" class="${p.link ? 'btn btn-outline' : 'btn btn-primary'}" target="_blank" rel="noopener">Solicitar demo →</a>`;
-  if (p.waMsg && !p.demo && !p.link) actions += `<a href="https://wa.me/5411154867460?text=${p.waMsg}" class="btn btn-outline" target="_blank" rel="noopener">Consultar →</a>`;
+  if (p.demo) actions += `<a href="https://wa.me/5491154867460?text=${p.demoMsg}" class="${p.link ? 'btn btn-outline' : 'btn btn-primary'}" target="_blank" rel="noopener">Solicitar demo →</a>`;
+  if (p.waMsg && !p.demo && !p.link) actions += `<a href="https://wa.me/5491154867460?text=${p.waMsg}" class="btn btn-outline" target="_blank" rel="noopener">Consultar →</a>`;
 
   projModalBody.innerHTML = `
     <div class="proj-header">
