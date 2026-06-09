@@ -160,10 +160,16 @@ button{border:none;background:none;font-family:inherit;cursor:pointer}
 .catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .cat-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 .cat-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);border-color:rgba(53,37,205,.2)}
-.cat-head{padding:20px 20px 16px;background:var(--surface-low);border-bottom:1px solid var(--border-light);display:flex;align-items:flex-start;gap:14px}
+.cat-head{padding:20px 20px 18px;background:var(--surface-low);background-size:cover;background-position:center;border-bottom:1px solid var(--border-light);display:flex;align-items:flex-start;gap:14px;position:relative;min-height:130px}
+.cat-head::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,22,140,.88) 0%,rgba(11,28,48,.75) 100%)}
+.cat-head>*{position:relative;z-index:1}
 .cat-icon{width:44px;height:44px;background:var(--primary-light);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0}
+.cat-head .cat-icon{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:white}
 .cat-name{font-size:16px;font-weight:700;color:var(--text);margin-bottom:3px}
+.cat-head .cat-name{color:white;font-size:17px}
 .cat-tag{font-size:12px;color:var(--text-3)}
+.cat-head .cat-tag{color:rgba(255,255,255,.75)}
+.cat-head .badge-outline{border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.85);background:rgba(255,255,255,.08)}
 .cat-body{padding:16px 20px;flex:1;display:flex;flex-direction:column;gap:14px}
 .cat-targets-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
 .cat-pills{display:flex;flex-wrap:wrap;gap:5px}
