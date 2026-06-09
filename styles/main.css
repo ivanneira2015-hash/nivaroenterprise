@@ -145,16 +145,20 @@ button{border:none;background:none;font-family:inherit;cursor:pointer}
 .stat-lbl{font-size:13px;color:rgba(255,255,255,.65);font-weight:500}
 
 /* PILLARS */
-.pillars{padding:80px 0}
+.pillars{padding:88px 0;background:linear-gradient(135deg,#1e12a0 0%,#0f1c3a 100%);position:relative;overflow:hidden}
+.pillars::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(107,82,246,.18) 0%,transparent 70%);pointer-events:none}
+.pillars .sh .eyebrow{color:var(--gold);background:rgba(201,168,76,.12);border-color:rgba(201,168,76,.25)}
+.pillars .sh h2{color:white}
+.pillars .sh p{color:rgba(255,255,255,.6)}
 .pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.pillar{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--r-card);padding:32px 24px;text-align:center;transition:transform var(--t),box-shadow var(--t),border-color var(--t)}
-.pillar:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:rgba(53,37,205,.2)}
-.pillar-icon{width:52px;height:52px;background:var(--primary-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:var(--primary);transition:background var(--t)}
-.pillar:hover .pillar-icon{background:var(--surface-container)}
-.pillar-name{font-size:16px;font-weight:700;margin-bottom:8px}
-.pillar-desc{font-size:13px;color:var(--text-2);line-height:1.55}
-.pillar-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--primary);margin-top:12px;padding:5px 10px;border-radius:var(--r-sm);background:var(--primary-light);transition:background var(--t)}
-.pillar-link:hover{background:var(--surface-container)}
+.pillar{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-card);padding:32px 24px;text-align:center;transition:transform var(--t),box-shadow var(--t),border-color var(--t),background var(--t);backdrop-filter:blur(6px)}
+.pillar:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.25);border-color:rgba(201,168,76,.35);background:rgba(255,255,255,.1)}
+.pillar-icon{width:56px;height:56px;background:rgba(255,255,255,.12);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:white;transition:background var(--t),box-shadow var(--t)}
+.pillar:hover .pillar-icon{background:rgba(201,168,76,.18);color:var(--gold);box-shadow:0 0 20px rgba(201,168,76,.2)}
+.pillar-name{font-size:16px;font-weight:700;margin-bottom:8px;color:white}
+.pillar-desc{font-size:13px;color:rgba(255,255,255,.6);line-height:1.55}
+.pillar-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--gold);margin-top:14px;padding:5px 10px;border-radius:var(--r-sm);background:rgba(201,168,76,.1);transition:background var(--t)}
+.pillar-link:hover{background:rgba(201,168,76,.2)}
 
 /* CATALOG */
 .catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -268,21 +272,7 @@ button{border:none;background:none;font-family:inherit;cursor:pointer}
 .floating-wa-txt{font-size:13px;font-weight:600;white-space:nowrap}
 @keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}50%{box-shadow:0 4px 28px rgba(37,211,102,.65),0 0 0 8px rgba(37,211,102,.1)}}
 
-/* PILLARS — VISUAL IDENTITY */
-.pillar{position:relative;overflow:hidden}
-.pillar::after{content:attr(data-n);position:absolute;right:10px;bottom:-14px;font-size:82px;font-weight:900;line-height:1;pointer-events:none;user-select:none;opacity:.07;color:var(--primary)}
-.pillar--web{background:linear-gradient(135deg,#f2f0ff 0%,#e8e4ff 100%)}
-.pillar--apps{background:linear-gradient(135deg,#f5f0ff 0%,#ece3ff 100%)}
-.pillar--soporte{background:linear-gradient(135deg,#edfcfa 0%,#d3f5f2 100%)}
-.pillar--auto{background:linear-gradient(135deg,#fffdf0 0%,#fff3cc 100%)}
-.pillar--web .pillar-icon{background:rgba(53,37,205,.1);color:#3525CD}
-.pillar--apps .pillar-icon{background:rgba(124,58,237,.1);color:#7C3AED}
-.pillar--soporte .pillar-icon{background:rgba(13,148,136,.12);color:#0D9488}
-.pillar--auto .pillar-icon{background:rgba(201,168,76,.15);color:#a07820}
-.pillar--web .pillar-link{color:#3525CD;background:rgba(53,37,205,.08)}
-.pillar--apps .pillar-link{color:#7C3AED;background:rgba(124,58,237,.08)}
-.pillar--soporte .pillar-link{color:#0D9488;background:rgba(13,148,136,.08)}
-.pillar--auto .pillar-link{color:#a07820;background:rgba(201,168,76,.1)}
+/* PILLARS — (color variants removed, handled by .pillars dark bg) */
 
 /* PORT ACTIONS */
 .port-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
