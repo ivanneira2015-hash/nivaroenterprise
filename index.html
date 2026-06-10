@@ -638,7 +638,7 @@
 
       <div class="port-card reveal rv1">
         <div class="port-thumb">
-          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80" alt="Nivaro Products" loading="lazy"/>
+          <img src="assets/screenshots/nivaro-products.png" alt="Nivaro Products" loading="lazy"/>
           <div class="port-status"><span class="badge badge-green">LIVE</span></div>
         </div>
         <div class="port-body">
@@ -659,7 +659,7 @@
 
       <div class="port-card reveal rv2">
         <div class="port-thumb">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="MayoExpress POS" loading="lazy"/>
+          <img src="assets/screenshots/mayo-express.png" alt="MayoExpress POS" loading="lazy"/>
           <div class="port-status"><span class="badge badge-green">LIVE</span></div>
         </div>
         <div class="port-body">
@@ -681,7 +681,7 @@
 
       <div class="port-card reveal rv3">
         <div class="port-thumb">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Nivaro CRM" loading="lazy"/>
+          <img src="assets/screenshots/nivaro-crm.png" alt="Nivaro CRM" loading="lazy"/>
           <div class="port-status"><span class="badge badge-green">LIVE</span></div>
         </div>
         <div class="port-body">
@@ -836,6 +836,100 @@
   </div>
 </section>
 
+<!-- TESTIMONIOS -->
+<section class="section" id="testimonios">
+  <div class="c">
+    <div class="sh reveal">
+      <div class="eyebrow">Testimonios</div>
+      <h2>Lo que dicen <em>nuestros clientes</em></h2>
+      <p>Negocios reales que confiaron en Nivaro para crecer con tecnología.</p>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi-card reveal rv1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Antes llevaba el stock en una libreta y las ventas en cuadernos. Con MayoExpress sé exactamente cuánto vendí, qué me queda y qué cobré. Me cambió el negocio de verdad."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RM</div>
+          <div>
+            <div class="testi-name">Ricardo Montalvo</div>
+            <div class="testi-role">Distribuidora de alimentos · Buenos Aires</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal rv2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Necesitaba una web profesional para mi local y en menos de dos semanas Walter me entregó algo que superó lo que esperaba. Ahora mis clientes me encuentran por Google y me escriben por WhatsApp directo."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">LP</div>
+          <div>
+            <div class="testi-name">Laura Pérez</div>
+            <div class="testi-role">Odontología — consultorio privado · CABA</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal rv3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Tenemos vendedores que cobran en cuotas casa por casa. Nivaro CRM nos permite ver quién debe, qué cobró cada vendedor y dónde están los clientes morosos. Es exactamente lo que necesitábamos."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">ST</div>
+          <div>
+            <div class="testi-name">Sebastián Torres</div>
+            <div class="testi-role">Venta de electrodomésticos en cuotas · GBA</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FORMULARIO DE RESEÑAS -->
+    <div class="review-form-wrap reveal">
+      <div class="review-form-inner">
+        <div class="review-form-header">
+          <div class="eyebrow left">¿Ya trabajaste con nosotros?</div>
+          <h3>Dejá tu comentario</h3>
+          <p>Tu opinión nos ayuda a mejorar y a que otros negocios nos encuentren.</p>
+        </div>
+        <form class="review-form" action="https://formsubmit.co/ivanneira2015@gmail.com" method="POST" id="review-form">
+          <input type="hidden" name="_subject" value="Nueva reseña en NivaroEnterprise">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="review-form-row">
+            <div class="rf-field">
+              <label class="rf-label">Tu nombre</label>
+              <input class="rf-input" type="text" name="nombre" placeholder="Ej: Carlos García" required>
+            </div>
+            <div class="rf-field">
+              <label class="rf-label">Tu negocio</label>
+              <input class="rf-input" type="text" name="negocio" placeholder="Ej: Distribuidora XYZ">
+            </div>
+          </div>
+          <div class="rf-field">
+            <label class="rf-label">¿Qué servicio usaste?</label>
+            <select class="rf-input" name="servicio">
+              <option value="">Seleccioná un servicio</option>
+              <option>Página web</option>
+              <option>MayoExpress (Sistema POS)</option>
+              <option>Nivaro CRM</option>
+              <option>Aplicación a medida</option>
+              <option>Automatización / IA</option>
+              <option>Soporte técnico</option>
+            </select>
+          </div>
+          <div class="rf-field">
+            <label class="rf-label">Tu comentario</label>
+            <textarea class="rf-input rf-textarea" name="comentario" rows="4" placeholder="Contanos tu experiencia..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="review-submit">Enviar comentario</button>
+          <div class="rf-success" id="rf-success" hidden>Gracias por tu reseña. La vamos a leer y probablemente la publiquemos en el sitio.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section class="cta-final">
   <div class="c cta-inner">
@@ -900,7 +994,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Nivaro Soluciones Tecnológicas. Rosario, Argentina.</span>
+      <span>© 2026 Nivaro Soluciones Tecnológicas. Buenos Aires, Argentina.</span>
       <span>Hecho con código y <span style="color:#ff4466">♥</span> por Walter Neira.</span>
     </div>
   </div>

@@ -215,6 +215,27 @@ document.querySelectorAll('[data-project]').forEach(btn => {
   btn.addEventListener('click', () => openProjectModal(btn.dataset.project));
 });
 
+/* REVIEW FORM */
+const reviewForm = document.getElementById('review-form');
+const rfSuccess = document.getElementById('rf-success');
+if (reviewForm) {
+  reviewForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('review-submit');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    try {
+      const data = new FormData(reviewForm);
+      await fetch(reviewForm.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+      reviewForm.style.display = 'none';
+      rfSuccess.removeAttribute('hidden');
+    } catch {
+      btn.textContent = 'Enviar comentario';
+      btn.disabled = false;
+    }
+  });
+}
+
 /* HERO OPTS INTERACTION */
 document.querySelectorAll('.hero-opt').forEach(opt => {
   opt.addEventListener('click', () => {
