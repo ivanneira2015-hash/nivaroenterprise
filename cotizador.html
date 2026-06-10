@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Cotizador — Nivaro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/cotizador.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="c-header">
+  <div class="c-header-logo">
+    <div class="c-logo-mark">N</div>
+    <span class="c-logo-text">Nivaro<span class="c-logo-dot">.</span> <span style="font-weight:500;color:var(--muted)">Cotizador</span></span>
+  </div>
+  <div class="c-header-end">
+    <span class="c-quote-badge" id="headerNum">COT-2026-001</span>
+    <button class="c-btn c-btn-ghost c-btn-sm" id="btnNuevo">+ Nuevo</button>
+    <button class="c-btn c-btn-ghost c-btn-sm" id="btnSalir">Salir</button>
+  </div>
+</header>
+
+<!-- BODY -->
+<div class="c-body">
+
+  <!-- PANEL IZQUIERDO: FORMULARIO -->
+  <div class="c-form-panel">
+
+    <!-- CLIENTE -->
+    <div class="c-section">
+      <div class="c-section-title">Cliente</div>
+      <div class="c-grid">
+        <div>
+          <label class="c-label">Nombre *</label>
+          <input class="c-input" id="cName" type="text" placeholder="Juan García">
+        </div>
+        <div>
+          <label class="c-label">Teléfono</label>
+          <input class="c-input" id="cPhone" type="text" placeholder="+54 911 XXXXXX">
+        </div>
+        <div>
+          <label class="c-label">Email</label>
+          <input class="c-input" id="cEmail" type="email" placeholder="juan@email.com">
+        </div>
+        <div>
+          <label class="c-label">Empresa / Negocio</label>
+          <input class="c-input" id="cBusiness" type="text" placeholder="García Materiales">
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICIO -->
+    <div class="c-section">
+      <div class="c-section-title">Servicio</div>
+      <div class="c-cat-tabs" id="catTabs">
+        <button class="c-cat-tab active" data-cat="web">Páginas Web</button>
+        <button class="c-cat-tab" data-cat="apps">Aplicaciones</button>
+        <button class="c-cat-tab" data-cat="soporte">Soporte Técnico</button>
+      </div>
+      <div class="c-svc-list" id="svcList"></div>
+    </div>
+
+    <!-- REQUERIMIENTOS -->
+    <div class="c-section">
+      <div class="c-section-title">Requerimientos</div>
+      <label class="c-label">Describí qué necesita el cliente</label>
+      <textarea class="c-textarea" id="requirements" placeholder="Ej: Local de ropa que quiere mostrar sus productos, tener sección de contacto, link a Instagram y recibir pedidos por WhatsApp..."></textarea>
+      <div id="recsBox"></div>
+    </div>
+
+    <!-- EXTRAS -->
+    <div class="c-section">
+      <div class="c-section-title">Extras</div>
+      <div class="c-addons-grid" id="addonsList"></div>
+    </div>
+
+    <!-- NOTA INTERNA -->
+    <div class="c-section">
+      <div class="c-section-title">
+        Nota interna
+        <span style="font-size:10px;font-weight:400;color:var(--muted);text-transform:none;letter-spacing:0">— no aparece en el PDF</span>
+      </div>
+      <textarea class="c-textarea" id="internalNote" placeholder="Ej: Cliente urgente, tiene los textos listos. Estimar 1.5 semanas reales. Pide posible descuento si paga adelantado." style="min-height:60px"></textarea>
+    </div>
+
+  </div>
+
+  <!-- PANEL DERECHO: PREVIEW -->
+  <div class="c-preview-panel">
+    <div class="c-preview-scroll">
+      <div class="c-doc" id="previewDoc">
+        <div class="c-empty">
+          <div class="c-empty-icon">📋</div>
+          <div class="c-empty-text">Seleccioná un servicio<br>para ver el presupuesto en vivo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-actions">
+      <div class="c-time-note" id="timeNote">
+        <strong>Tiempo estimado (solo vos)</strong>
+        <span id="timeText"></span>
+      </div>
+      <button class="c-btn c-btn-primary" id="btnPDF" disabled>Descargar PDF</button>
+      <button class="c-btn c-btn-wa" id="btnWA" disabled>Copiar para WhatsApp</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/cotizador.js"></script>
+</body>
+</html>

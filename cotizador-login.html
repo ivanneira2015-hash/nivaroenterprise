@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Cotizador — Nivaro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/cotizador.css"/>
+</head>
+<body class="c-login-body">
+
+<div class="c-login-card">
+  <div class="c-login-logo">
+    <div class="c-logo-mark">N</div>
+    <span class="c-logo-text">Nivaro<span class="c-logo-dot">.</span></span>
+  </div>
+  <h1 class="c-login-title">Cotizador interno</h1>
+  <p class="c-login-sub">Acceso exclusivo — ingresá tu contraseña</p>
+
+  <form id="loginForm">
+    <div class="c-login-field">
+      <label class="c-label" for="pw">Contraseña</label>
+      <input class="c-input" type="password" id="pw" placeholder="••••••••" autocomplete="current-password" required>
+    </div>
+    <div class="c-error" id="loginErr">Contraseña incorrecta. Intentá de nuevo.</div>
+    <button type="submit" class="c-btn c-btn-primary c-btn-full">Ingresar →</button>
+  </form>
+</div>
+
+<script>
+  // Redirigir si ya está autenticado
+  if (sessionStorage.getItem('niv_auth') === '1') location.href = 'cotizador.html'
+
+  // ── CAMBIAR CONTRASEÑA ACÁ ──
+  const PASSWORD = 'Nivaro2025'
+  // ────────────────────────────
+
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault()
+    const err = document.getElementById('loginErr')
+    if (document.getElementById('pw').value === PASSWORD) {
+      sessionStorage.setItem('niv_auth', '1')
+      location.href = 'cotizador.html'
+    } else {
+      err.style.display = 'block'
+      document.getElementById('pw').value = ''
+      document.getElementById('pw').focus()
+    }
+  })
+</script>
+</body>
+</html>

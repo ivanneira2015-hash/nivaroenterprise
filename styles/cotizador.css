@@ -1,0 +1,145 @@
+/* ── COTIZADOR — estilos internos ─────────────── */
+:root{
+  --primary:#3525CD;--primary-light:#6B52F6;--primary-dark:#2118A0;
+  --gold:#C9A84C;--bg:#F8F9FF;--surface:#FFFFFF;--surface-low:#EEF0FF;
+  --text:#0D1117;--muted:#6B7280;--border:#E0E3FF;
+  --green:#10B981;--yellow:#F59E0B;--red:#EF4444;
+  --radius:10px
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+
+/* ── BOTONES ──────────────────────────────────── */
+.c-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s;border:none;font-family:'Inter',sans-serif}
+.c-btn-primary{background:var(--primary);color:#fff}
+.c-btn-primary:hover:not(:disabled){background:var(--primary-dark)}
+.c-btn-primary:disabled{opacity:.4;cursor:not-allowed}
+.c-btn-ghost{background:transparent;color:var(--primary);border:1.5px solid var(--border)}
+.c-btn-ghost:hover{background:var(--surface-low);border-color:var(--primary)}
+.c-btn-gold{background:var(--gold);color:#fff;border:none}
+.c-btn-gold:hover{background:#b8973f}
+.c-btn-wa{background:#25D366;color:#fff;border:none}
+.c-btn-wa:hover:not(:disabled){background:#1fab52}
+.c-btn-wa:disabled{opacity:.4;cursor:not-allowed}
+.c-btn-sm{padding:7px 12px;font-size:12px}
+.c-btn-full{width:100%;justify-content:center}
+
+/* ── INPUTS ────────────────────────────────────── */
+.c-input,.c-textarea,.c-select{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);background:var(--surface);transition:.15s;outline:none}
+.c-input:focus,.c-textarea:focus,.c-select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(53,37,205,.1)}
+.c-textarea{resize:vertical;min-height:80px}
+.c-label{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:5px;display:block;letter-spacing:.02em}
+
+/* ── LOGO ──────────────────────────────────────── */
+.c-logo-mark{width:30px;height:30px;border-radius:7px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;position:relative;flex-shrink:0}
+.c-logo-mark::after{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;position:absolute;bottom:4px;right:4px}
+.c-logo-text{font-weight:800;font-size:15px;letter-spacing:-.02em}
+.c-logo-dot{color:var(--gold)}
+
+/* ── LOGIN ─────────────────────────────────────── */
+.c-login-body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1e12a0 0%,#0f1c3a 100%)}
+.c-login-card{background:var(--surface);border-radius:16px;padding:40px;width:100%;max-width:380px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.c-login-logo{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.c-login-title{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+.c-login-sub{color:var(--muted);font-size:13px;margin-bottom:24px}
+.c-login-field{margin-bottom:14px}
+.c-error{color:var(--red);font-size:12px;margin-bottom:12px;display:none}
+
+/* ── TOOL HEADER ──────────────────────────────── */
+.c-header{background:var(--surface);border-bottom:1.5px solid var(--border);padding:0 24px;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(53,37,205,.06)}
+.c-header-logo{display:flex;align-items:center;gap:8px}
+.c-header-end{display:flex;align-items:center;gap:10px}
+.c-quote-badge{font-size:11px;font-weight:700;color:var(--primary);background:var(--surface-low);padding:4px 10px;border-radius:20px}
+
+/* ── TOOL LAYOUT ──────────────────────────────── */
+.c-body{display:grid;grid-template-columns:1fr 440px;min-height:calc(100vh - 54px)}
+
+/* ── FORM PANEL ───────────────────────────────── */
+.c-form-panel{padding:20px;overflow-y:auto;border-right:1.5px solid var(--border)}
+.c-section{background:var(--surface);border-radius:var(--radius);border:1.5px solid var(--border);padding:18px 20px;margin-bottom:14px}
+.c-section-title{font-size:11px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.c-section-title::before{content:'';width:3px;height:13px;background:var(--primary);border-radius:2px;flex-shrink:0}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.c-full{grid-column:1/-1}
+
+/* ── CATEGORY TABS ────────────────────────────── */
+.c-cat-tabs{display:flex;gap:4px;margin-bottom:12px;background:var(--surface-low);padding:4px;border-radius:10px}
+.c-cat-tab{flex:1;padding:7px 6px;text-align:center;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted);transition:.15s;border:none;background:transparent;font-family:'Inter',sans-serif}
+.c-cat-tab.active{background:var(--primary);color:#fff;box-shadow:0 2px 8px rgba(53,37,205,.25)}
+.c-cat-tab:hover:not(.active){background:rgba(53,37,205,.06)}
+
+/* ── SERVICE LIST ─────────────────────────────── */
+.c-svc-list{display:flex;flex-direction:column;gap:6px}
+.c-svc-item{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:.15s;background:var(--surface)}
+.c-svc-item:hover{border-color:var(--primary-light);background:var(--surface-low)}
+.c-svc-item.selected{border-color:var(--primary);background:#f0eeff;box-shadow:0 0 0 3px rgba(53,37,205,.08)}
+.c-svc-name{font-weight:600;font-size:13px}
+.c-svc-desc{font-size:11px;color:var(--muted);margin-top:2px}
+.c-svc-right{text-align:right;flex-shrink:0;margin-left:12px}
+.c-svc-price{font-weight:800;font-size:13px;color:var(--primary)}
+.c-svc-delivery{font-size:10px;color:var(--muted)}
+
+/* ── RECOMENDACIONES ──────────────────────────── */
+.c-rec{background:#FFFBEB;border:1.5px solid #F59E0B;border-radius:8px;padding:12px 14px;margin-top:10px}
+.c-rec-title{font-weight:700;font-size:12px;color:#92400E;margin-bottom:3px}
+.c-rec-msg{font-size:12px;color:#78350F;margin-bottom:8px;line-height:1.5}
+.c-rec-actions{display:flex;gap:6px}
+
+/* ── ADDONS ───────────────────────────────────── */
+.c-addons-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.c-addon{display:flex;align-items:flex-start;gap:8px;padding:9px 10px;border:1.5px solid var(--border);border-radius:7px;cursor:pointer;transition:.15s}
+.c-addon:hover{border-color:var(--primary-light);background:var(--surface-low)}
+.c-addon input[type=checkbox]{width:14px;height:14px;accent-color:var(--primary);flex-shrink:0;margin-top:2px;cursor:pointer}
+.c-addon-name{font-size:12px;font-weight:600;line-height:1.3}
+.c-addon-price{font-size:11px;color:var(--primary);font-weight:700;margin-top:1px}
+
+/* ── PREVIEW PANEL ────────────────────────────── */
+.c-preview-panel{display:flex;flex-direction:column;position:sticky;top:54px;height:calc(100vh - 54px)}
+.c-preview-scroll{flex:1;overflow-y:auto;padding:20px;background:var(--bg)}
+.c-doc{background:var(--surface);border-radius:var(--radius);box-shadow:0 4px 24px rgba(53,37,205,.1);overflow:hidden;font-size:12px}
+.c-doc-header{background:var(--primary);padding:16px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between}
+.c-doc-logo{display:flex;align-items:center;gap:9px}
+.c-doc-company{font-weight:700;font-size:12px;line-height:1.3}
+.c-doc-company small{display:block;font-weight:400;font-size:10px;opacity:.65;margin-top:1px}
+.c-doc-meta{text-align:right;font-size:10px;opacity:.75}
+.c-doc-num{font-weight:800;font-size:13px;color:var(--gold);opacity:1!important;display:block;margin-bottom:2px}
+.c-doc-body{padding:18px 20px}
+.c-doc-label{font-size:8px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.c-doc-section{margin-bottom:14px}
+.c-client-box{background:var(--surface-low);border-radius:6px;padding:10px 12px}
+.c-client-name{font-weight:700;font-size:13px;margin-bottom:2px}
+.c-client-detail{color:var(--muted);font-size:10px}
+.c-proj-name{font-weight:700;font-size:14px;margin-bottom:4px}
+.c-proj-req{color:var(--muted);font-size:11px;font-style:italic;line-height:1.5}
+.c-divider{height:1px;background:var(--border);margin:12px 0}
+.c-item-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dashed var(--border);align-items:baseline}
+.c-item-row.base{font-weight:600;font-size:12px}
+.c-item-row.addon{font-size:11px;color:var(--muted);padding-left:8px}
+.c-total-row{display:flex;justify-content:space-between;padding:10px 0;margin-top:6px;border-top:2px solid var(--text)}
+.c-total-label{font-weight:800;font-size:14px;color:var(--primary)}
+.c-total-amount{font-weight:900;font-size:18px;color:var(--primary)}
+.c-pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}
+.c-pay-item{background:var(--surface-low);border-radius:6px;padding:8px 10px}
+.c-pay-lbl{font-size:9px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.c-pay-val{font-size:12px;font-weight:700;color:var(--text);margin-top:2px}
+.c-empty{text-align:center;padding:50px 20px;color:var(--muted)}
+.c-empty-icon{font-size:36px;margin-bottom:12px}
+.c-empty-text{font-size:13px}
+
+/* ── ACCIONES ─────────────────────────────────── */
+.c-actions{padding:14px 20px;border-top:1.5px solid var(--border);background:var(--surface);display:flex;flex-direction:column;gap:8px}
+.c-time-note{background:var(--surface-low);border-radius:7px;padding:9px 12px;font-size:11px;border-left:3px solid var(--primary);display:none}
+.c-time-note strong{color:var(--primary);display:block;margin-bottom:1px;font-size:10px;text-transform:uppercase;letter-spacing:.04em}
+
+/* ── SCROLLBAR ────────────────────────────────── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:10px}
+
+/* ── RESPONSIVE ───────────────────────────────── */
+@media(max-width:900px){
+  .c-body{grid-template-columns:1fr}
+  .c-preview-panel{position:static;height:auto}
+  .c-grid{grid-template-columns:1fr}
+  .c-addons-grid{grid-template-columns:1fr}
+}
