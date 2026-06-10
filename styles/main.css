@@ -149,6 +149,7 @@ button{border:none;background:none;font-family:inherit;cursor:pointer}
 .pillars::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(107,82,246,.18) 0%,transparent 70%);pointer-events:none}
 .pillars .sh .eyebrow{color:var(--gold);background:rgba(201,168,76,.12);border-color:rgba(201,168,76,.25)}
 .pillars .sh h2{color:white}
+.pillars .sh h2 em{color:white}
 .pillars .sh p{color:rgba(255,255,255,.6)}
 .pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .pillar{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-card);padding:32px 24px;text-align:center;transition:transform var(--t),box-shadow var(--t),border-color var(--t),background var(--t);backdrop-filter:blur(6px)}
@@ -218,7 +219,7 @@ button{border:none;background:none;font-family:inherit;cursor:pointer}
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start}
 .founder-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--r-modal);padding:32px;text-align:center;box-shadow:var(--sh-sm);position:sticky;top:calc(var(--nav-h) + 24px)}
-.founder-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;object-position:center top;margin:0 auto 16px;border:3px solid var(--primary-light);box-shadow:0 0 0 4px var(--surface-low)}
+.founder-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;object-position:center center;margin:0 auto 16px;border:3px solid var(--primary-light);box-shadow:0 0 0 4px var(--surface-low)}
 .founder-initials{width:110px;height:110px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:800;margin:0 auto 16px}
 .founder-name{font-size:20px;font-weight:800;margin-bottom:4px}
 .founder-role{font-size:13px;color:var(--text-2);margin-bottom:20px}
